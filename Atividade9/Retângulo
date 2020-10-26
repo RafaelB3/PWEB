@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	</head>
+
+<body>
+	<script>
+		function Retangulo(x, y) {
+            this.altura = x; 
+            this.base = y;
+            this.calcArea = function() {
+                return this.altura * this.base;
+            }
+        }
+        
+        var objRetangulo = new Retangulo(10, 15);
+        alert('Area: ' + objRetangulo.calcArea());
+        
+	</script>
+</body>
