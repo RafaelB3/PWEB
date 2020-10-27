@@ -3,11 +3,28 @@
 
 <head>
 	<meta charset="UTF-8">
-  <title> Janela </title>
-	</head>
+	<title>Abra a janela</title>
+
+	<script>
+		function abrir() {
+			this.src = "aberta.jpg";
+		}
+
+		function quebrar() {
+			this.src = "quebrada.jpg";
+		}
+	</script>
+</head>
 
 <body>
-	<script>
-		
-	</script>
-</body>
+
+	<body>
+		<img src="fechada.jpg" 
+		onmouseout="this.src='fechada.jpg'" alt="Janela Fechada"
+		onmouseover="this.src='aberta.jpg'" alt="Janela Aberta" 
+		 onclick="this.src='quebrada.jpg'" alt="Janela Quebrada"> <!-- Eu queria fazer usando um método. mas não consegui :( -->
+
+
+	</body>
+
+</html>
