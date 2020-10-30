@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	</head>
+
+<body>
+	<script>
+		function Conta(){
+			var nome; 
+			var banco; 
+			var nrConta; 
+			var saldo;
+
+			this.getNome = function () {
+				return nome;
+			};
+
+			this.setNome = function (value) {
+				nome = value;
+			}	
+
+			this.getBanco = function () {
+				return banco;
+			};
+
+			this.setBanco = function (value) {
+				banco = value;
+			};
+
+			this.getNrConta = function () {
+				return nrConta;
+			};
+
+			this.setNrConta = function (value) {
+				nrConta = value;
+			};
+
+			this.getSaldo = function () {
+				return saldo;
+			};
+
+			this.setSaldo = function (value) {
+				saldo = value;
+			};
+		}
+
+		function CCorrente() {
+			var saldoEspecial;
+
+			this.getSaldoEspecial = function () {
+				return saldoEspecial;
+			};
+
+			this.setSaldoEspecial = function (value) {
+				saldoEspecial = value;
+			};
+		}
+
+		function CPoupanca() {
+			var juros; var dtVencimento;
+
+			this.getJuros = function () {
+				return juros;
+			};
+
+			this.setJuros = function (value) {
+				juros = value;
+			}
+
+			this.getDtVencimento = function () {
+				return dtVencimento;
+			};
+
+			this.setDtVencimento = function (value) {
+				dtVencimento = value;
+			}
+		}
+
+		CCorrente.prototype = new Conta();
+		CPoupanca.prototype = new Conta();
+
+		myCCorrente = new CCorrente();
+		myPoupanca  = new CPoupanca();
+
+		myCCorrente.setNome('Jurema');
+		myCCorrente.setBanco('SoroBanco');
+		myCCorrente.setNrConta(1);
+		myCCorrente.setSaldo(20.50);
+		myCCorrente.setSaldoEspecial(40);
+
+		myPoupanca.setNome('Joelma');
+		myPoupanca.setBanco('VotoBanco');
+		myPoupanca.setNrConta(2);
+		myPoupanca.setSaldo(10);
+		myPoupanca.setJuros(5);
+		myPoupanca.setDtVencimento('30/10/2020');
+
+		alert(myCCorrente.getNome() + "   " + myCCorrente.getBanco() + "   " + myCCorrente.getNrConta() + "   " + myCCorrente.getSaldo() + "   " + myCCorrente.getSaldoEspecial());
+		alert(myPoupanca.getNome() + "   " + myPoupanca.getBanco() + "   " + myPoupanca.getNrConta() + "   " + myPoupanca.getSaldo() + "   " + myPoupanca.getJuros() + "   " + myPoupanca.getDtVencimento());
+	</script>
+</body>
+
+</html>
