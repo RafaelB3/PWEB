@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV11</title>
+
+    
+</head>
+<body>
+
+    <form action="teste" method="POST" name="formulario1" id="formulario1">
+
+        <div id="principal" width=200 heigth=200 aling=center>
+            <input type="text" name="texto" id="txt" size="52" maxlength="150">
+            <input type="checkbox" name="ToUpper" id="UP" onchange="Uper()">
+            <input type="checkbox" name="ToLower" id="LOW" onchange="Lower()">
+        
+        </div>
+    </form>
+    
+    <script>
+        function Uper() {
+            var str =  document.forms.formulario1.elements[0].value;
+            var res = str.toUpperCase();
+            document.forms.formulario1.elements[0].value = res
+        }
+
+        function Lower(params) {
+            var str =  document.forms.formulario1.elements[0].value;
+            var res = str.toLowerCase();
+            document.forms.formulario1.elements[0].value = res
+        }
+    </script>
+    
+</body>
+</html>
